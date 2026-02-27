@@ -284,8 +284,12 @@ public class MyLinkedList<E> implements MyList<E> {
   //POST:checks data elements if found, returns true
   //     else returns false
   public boolean contains(Object e) {
-    System.out.println("You must add the logic for method: contains");
-    return false;
+        Node<E> temp = head;
+        while (temp != null) {
+            if (temp.element.equals(e)) return true;
+            temp = temp.next;
+        }
+        return false;
   }
 
   @Override 
